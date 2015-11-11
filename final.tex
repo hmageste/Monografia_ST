@@ -14,10 +14,10 @@
 	twoside,			% para impressão em verso e anverso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	%chapter=TITLE,			% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,			% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,		% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,		% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
 	french,				% idioma adicional para hifenização
@@ -33,7 +33,7 @@
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
-\usepackage{color}				% Controle das cores
+\usepackage{color}			% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 % ---
@@ -41,14 +41,14 @@
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
-\usepackage{lipsum}				% para geração de dummy text
+\usepackage{lipsum}			% para geração de dummy text
 % ---
 
 % ---
 % Pacotes de citações
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage[alf]{abntex2cite}		% Citações padrão ABNT
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
@@ -75,22 +75,23 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{Modelo Canônico de\\ Trabalho Acadêmico com \abnTeX}
-\autor{Equipe \abnTeX}
-\local{Brasil}
-\data{2015, v-1.9.5}
-\orientador{Lauro César Araujo}
-\coorientador{Equipe \abnTeX}
+\autor{Henrique Mageste}
+\local{Rio de Janeiro, RJ - Brasil}
+\data{\today}
+\orientador{Justino Sanson Wanderley da Nóbrega, M. Sc.}
+%\coorientador{Equipe \abnTeX}
 \instituicao{%
-  Universidade do Brasil -- UBr
+  Universidade Federal do Rio de Janeiro - UFRJ
   \par
-  Faculdade de Arquitetura da Informação
+  Engenharia de Segurança do Trabalho
   \par
   Programa de Pós-Graduação}
-\tipotrabalho{Tese (Doutorado)}
+\tipotrabalho{Monografia}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
-as normas ABNT apresentado à comunidade de usuários \LaTeX.}
+\preambulo{Monografia Submetida ao Corpo Docente do Curso de Pós-Graduação em Engenharia de Segurança do Trabalho
+da Universidade Federal do Rio de Janeiro como Parte dos Requisitos Necessários para Obtenção do Título de Especialista
+em Engenharia de Segurança do Trabalho}
 % ---
 
 
@@ -109,10 +110,10 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
 		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
+		colorlinks=true,       	% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
+    	filecolor=magenta,      	% color of file links
 		urlcolor=blue,
 		bookmarksdepth=4
 }
@@ -127,7 +128,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 \setlength{\parindent}{1.3cm}
 
 % Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+\setlength{\parskip}{0.2cm} 		% tente também \onelineskip
 
 % ---
 % compila o indice
@@ -297,8 +298,9 @@ Zootecnia, Universidade de São Paulo, São Paulo, 2011.
    \vspace*{\fill}
    \centering
    \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+   \textit{Este trabalho é dedicado a todos os engenheiros,\\
+	   de segurança ou não, que queiram se aventurar na\\
+	   legislação naval.} \vspace*{\fill}
 \end{dedicatoria}
 % ---
 
@@ -306,22 +308,17 @@ Zootecnia, Universidade de São Paulo, São Paulo, 2011.
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-projeto abn\TeX\ foram extraídos de
-\url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-contribuíram para que a produção de trabalhos acadêmicos conforme
-as normas ABNT com \LaTeX\ fosse possível.
+Os agradecimentos principais são direcionados ao professor Justino da Nóbrega,
+pela sua paciência e orientação durante todo o curso deste trabalho.
 
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://www.abntex.net.br/}}~que contribuíram e que ainda
-contribuirão para a evolução do \abnTeX.
+Agradecimentos especiais são direcionados à empresa e à sua coordenadora ambiental que
+possibilitaram o desenvolvimento deste trabalho.
+
+Aos professores do curso de Pós-Graduação em Engenharia de Segurança do Trabalho da UFRJ,
+pelos ensinamentos proporcionados.
+
+À minha namorada, Alexandra, e aos amigos que direta ou indiretamente contribuiram para
+minha formação profissional e pessoal.
 
 \end{agradecimentos}
 % ---
@@ -332,11 +329,12 @@ contribuirão para a evolução do \abnTeX.
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
+		\textit
+		{
+		    ``Se enxerguei mais longe, \\
+		    foi porque me apoiei sobre os ombros de gigantes''\\
+		    (Isaac Newton)
+		}
 	\end{flushright}
 \end{epigrafe}
 % ---
