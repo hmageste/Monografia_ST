@@ -1,0 +1,21 @@
+.aux	A file that transports information from one compiler run to the next. Among other things, the .aux file is used to store information associated with cross-references.
+.bbl	Bibliography file output by BiBTeX and used by LaTeX
+.bib	Bibliography database file. (where you can store a list of full bibliographic citations)
+.blg	BiBTeX log file. (errors are logged here)
+.bst	BiBTeX style file.
+.cls	Class files define what your document looks like. They are selected with the \documentclass command.
+.dtx	Documented TeX. This is the main distribution format for LaTeX style files. If you process a .dtx file you get documented macro code of the LaTeX package contained in the .dtx file.
+.ins	The installer for the files contained in the matching .dtx file. If you download a LaTeX package from the net, you will normally get a .dtx and a .ins file. Run LaTeX on the .ins file to unpack the .dtx file.
+.fd	Font description file telling LaTeX about new fonts.
+.dvi	Device Independent File. This is the main result of a LaTeX compile run with latex. You can look at its content with a DVI previewer program or you can send it to a printer with dvips or a similar application.
+.pdf	Portable Document Format. This is the main result of a LaTeX compile run with pdflatex. You can look at its content or print it with any PDF viewer.
+.log	Gives a detailed account of what happened during the last compiler run.
+.toc	Stores all your section headers. It gets read in for the next compiler run and is used to produce the table of contents.
+.lof	This is like .toc but for the list of figures.
+.lot	And again the same for the list of tables.
+.idx	If your document contains an index. LaTeX stores all the words that go into the index in this file. Process this file with makeindex.
+.ind	The processed .idx file, ready for inclusion into your document on the next compile cycle.
+.ilg	Logfile telling what makeindex did.
+.sty	LaTeX Macro package. This is a file you can load into your LaTeX document using the \usepackage command.
+.tex	LaTeX or TeX input file. It can be compiled with latex.
+.out	hyperref package file, just one for the master file.
