@@ -88,22 +88,21 @@ em Engenharia de Segurança do Trabalho}
 % ---
 % Configurações de aparência do PDF final
 % --- 
-% alterando o aspecto da cor azul
-\definecolor{blue}{RGB}{41,5,195}
-% ---
+\definecolor{blue}{RGB}{41,5,195}		% alterando o aspecto da cor azul
+
 % informações do PDF
 \makeatletter
 \hypersetup{
-     	%pagebackref=true,
+     		%pagebackref=true,
 		pdftitle={\@title}, 
 		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
+    		pdfsubject={\imprimirpreambulo},
+	    	pdfcreator={LaTeX with abnTeX2},
 		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       	% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      	% color of file links
+		colorlinks=true,       		% false: boxed links; true: colored links
+    		linkcolor=blue,          		% color of internal links
+    		citecolor=blue,        		% color of links to bibliography
+    		filecolor=magenta,      	% color of file links
 		urlcolor=blue,
 		bookmarksdepth=4
 }
@@ -113,26 +112,17 @@ em Engenharia de Segurança do Trabalho}
 % --- 
 % Espaçamentos entre linhas e parágrafos 
 % --- 
-
 % O tamanho do parágrafo é dado por:
 \setlength{\parindent}{1.3cm}
 
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm} 		% tente também \onelineskip
 
-% ---
-% compila o indice
-% ---
+
 \makeindex
-% ---
 
-% ----
-% Início do documento
-% ----
+
 \begin{document}
-
-% Seleciona o idioma do documento (conforme pacotes do babel)
-%\selectlanguage{english}
 \selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
@@ -143,18 +133,9 @@ em Engenharia de Segurança do Trabalho}
 % ----------------------------------------------------------
 % \pretextual
 
-% ---
-% Capa
-% ---
 \imprimircapa
-% ---
 
-% ---
-% Folha de rosto
-% (o * indica que haverá a ficha bibliográfica)
-% ---
-\imprimirfolhaderosto*
-% ---
+\imprimirfolhaderosto*		% o * indica que haverá a ficha bibliográfica
 
 % ---
 % Inserir a ficha bibliografica
@@ -276,7 +257,7 @@ possibilitaram o desenvolvimento deste trabalho.
 Aos professores do curso de Pós-Graduação em Engenharia de Segurança do Trabalho da UFRJ,
 pelos ensinamentos proporcionados.
 
-À minha namorada, Alexandra, e aos amigos que direta ou indiretamente contribuiram para
+À minha namorada, Alexandra, e aos amigos que direta ou indiretamente contribuíram para
 minha formação profissional e pessoal.
 
 \end{agradecimentos}
@@ -301,34 +282,7 @@ minha formação profissional e pessoal.
 % ---
 % RESUMOS
 % ---
-
-% resumo em português
-\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
-\begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
-
- \textbf{Palavras-chave}: latex. abntex. editoração de texto.
-\end{resumo}
-
-% resumo em inglês
-\begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   This is the english abstract.
-
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Keywords}: latex. abntex. text editoration.
- \end{otherlanguage*}
-\end{resumo}
-% ---
+\include{include/0-summary}
 
 % ---
 % inserir lista de ilustrações
@@ -374,8 +328,6 @@ minha formação profissional e pessoal.
 \cleardoublepage
 % ---
 
-
-
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
@@ -383,23 +335,12 @@ minha formação profissional e pessoal.
 
 \include{include/1-introduction}
 
-% ---
 % Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ---
 \include{abntex2-modelo-include-comandos}
-% ---
 
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
 \part{Referenciais teóricos}
-% ----------------------------------------------------------
 
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
 \part{Resultados}
-% ----------------------------------------------------------
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -414,7 +355,6 @@ minha formação profissional e pessoal.
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
 \postextual
-% ----------------------------------------------------------
 
 % ----------------------------------------------------------
 % Referências bibliográficas
@@ -424,36 +364,23 @@ minha formação profissional e pessoal.
 % ----------------------------------------------------------
 % Glossário
 % ----------------------------------------------------------
-%
-% Consulte o manual da classe abntex2 para orientações sobre o glossário.
-%
-%\glossary
+%\glossary		% Consulte o manual da classe abntex2 para orientações sobre o glossário.
 
 % ----------------------------------------------------------
 % Apêndices
 % ----------------------------------------------------------
-
-% ---
-% Inicia os apêndices
-% ---
 \begin{apendicesenv}
-
-% Imprime uma página indicando o início dos apêndices
-\partapendices
+\partapendices		% Imprime uma página indicando o início dos apêndices
 
 \chapter{Apendice A}
 
 \end{apendicesenv}
-% ---
-
 
 % ----------------------------------------------------------
 % Anexos
 % ----------------------------------------------------------
-
 \begin{anexosenv}
-
-\partanexos % Imprime uma página indicando o início dos anexos
+\partanexos		% Imprime uma página indicando o início dos anexos
 
 \chapter{Anexo A}
 
