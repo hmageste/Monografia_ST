@@ -125,149 +125,11 @@ em Engenharia de Segurança do Trabalho}
 \imprimircapa
 \imprimirfolhaderosto*		% o * indica que haverá a ficha bibliográfica
 
-% ---
-% Inserir a ficha bibliografica
-% ---
-% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
-% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
-% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
-% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
-% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
-% o conteúdo de implementação deste arquivo pelo comando abaixo:
-%
-% \begin{fichacatalografica}
-%     \includepdf{fig_ficha_catalografica.pdf}
-% \end{fichacatalografica}
-
-\begin{fichacatalografica}
-	\sffamily
-	\vspace*{\fill}					% Posição vertical
-	\begin{center}					% Minipage Centralizado
-	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
-	\small
-	\imprimirautor
-	%Sobrenome, Nome do autor
-	
-	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-	\imprimirlocal, \imprimirdata-
-	
-	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
-	
-	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-	
-	\hspace{0.5cm}
-	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-	\imprimirdata.}\\
-	
-	\hspace{0.5cm}
-		1. Palavra-chave1.
-		2. Palavra-chave2.
-		2. Palavra-chave3.
-		I. Orientador.
-		II. Universidade xxx.
-		III. Faculdade de xxx.
-		IV. Título 			
-	\end{minipage}}
-	\end{center}
-\end{fichacatalografica}
-% ---
-
-% ---
-% Inserir folha de aprovação
-% ---
-% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
-% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
-% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
-% imagem da página assinada pela banca com o comando abaixo:
-%
-% \includepdf{folhadeaprovacao_final.pdf}
-%
-\begin{folhadeaprovacao}
-
-  \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
-    \end{center}
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-        
-   Trabalho aprovado. \imprimirlocal, \today:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    {\large\imprimirlocal}
-    \par
-    {\large\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
-\end{folhadeaprovacao}
-% ---
-
-% ---
-% Dedicatória
-% ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{Este trabalho é dedicado a todos os engenheiros,\\
-	   de segurança ou não, que queiram se aventurar na\\
-	   legislação naval.} \vspace*{\fill}
-\end{dedicatoria}
-% ---
-
-% ---
-% Agradecimentos
-% ---
-\begin{agradecimentos}
-Os agradecimentos principais são direcionados ao professor Justino da Nóbrega,
-pela sua paciência e orientação durante todo o curso deste trabalho.
-
-Agradecimentos especiais são direcionados à empresa e à sua coordenadora ambiental que
-possibilitaram o desenvolvimento deste trabalho.
-
-Aos professores do curso de Pós-Graduação em Engenharia de Segurança do Trabalho da UFRJ,
-pelos ensinamentos proporcionados.
-
-À minha namorada, Alexandra, e aos amigos que direta ou indiretamente contribuíram para
-minha formação profissional e pessoal.
-
-\end{agradecimentos}
-% ---
-
-% ---
-% Epígrafe
-% ---
-\begin{epigrafe}
-    \vspace*{\fill}
-	\begin{flushright}
-		\textit
-		{
-		    ``Se enxerguei mais longe, \\
-		    foi porque me apoiei sobre os ombros de gigantes''\\
-		    (Isaac Newton)
-		}
-	\end{flushright}
-\end{epigrafe}
-% ---
-
-% ---
-% RESUMOS
-% ---
+\input{include/0-fichacatalografica}
+\input{include/0-folhadeaprovacao}
+\input{include/0-dedicatoria}
+\input{include/0-agradecimentos}
+\input{include/0-epigrafe}
 \include{include/0-summary}
 
 % ---
@@ -286,11 +148,7 @@ minha formação profissional e pessoal.
 \cleardoublepage
 % ---
 
-% ---
-% inserir lista de abreviaturas, siglas e símbolos
-% ---
 \include{include/0-acronyms_symbols_list}
-
 
 % ---
 % inserir o sumario
