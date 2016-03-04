@@ -139,4 +139,4 @@ sympy-plots-for-*.tex/
 .DS_Store
 
 # Generated PDFs
-final.pdf
+main.pdf
