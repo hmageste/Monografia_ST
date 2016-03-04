@@ -19,47 +19,11 @@
 	%subsubsection=TITLE,		% títulos de subsubseções convertidos em letras maiúsculas
 				% -- opções do pacote babel --
 	english,					% idioma adicional para hifenização
-	french,					% idioma adicional para hifenização
 	spanish,					% idioma adicional para hifenização
 	brazil					% o último idioma é o principal do documento
 	]{abntex2}
 
-% ---
-% Pacotes básicos 
-% ---
-\usepackage{lmodern}			% Usa a fonte Latin Modern			
-\usepackage[T1]{fontenc}			% Selecao de codigos de fonte.
-\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
-\usepackage{lastpage}			% Usado pela Ficha catalográfica
-\usepackage{indentfirst}			% Indenta o primeiro parágrafo de cada seção.
-\usepackage{color}				% Controle das cores
-\usepackage{graphicx}			% Inclusão de gráficos
-\usepackage{microtype} 			% para melhorias de justificação
-
-% ---
-% Pacotes de citações
-% ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}		% Citações padrão ABNT
-
-% --- 
-% CONFIGURAÇÕES DE PACOTES
-% --- 
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1
-		Nenhuma citação no texto.
-	\or
-		Citado na página #2.
-	\else
-		Citado #1 vezes nas páginas #2.
-	\fi}
-% ---
+\usepackage{mystyle}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -81,35 +45,6 @@
 da Universidade Federal do Rio de Janeiro como Parte dos Requisitos Necessários para Obtenção do Título de Especialista
 em Engenharia de Segurança do Trabalho}
 % ---
-
-
-% ---
-% Configurações de aparência do PDF final
-% --- 
-\definecolor{blue}{RGB}{41,5,195}		% alterando o aspecto da cor azul
-
-% informações do PDF
-\makeatletter
-\hypersetup{
-     		%pagebackref=true,
-		pdftitle={\@title}, 
-		pdfauthor={\@author},
-    		pdfsubject={\imprimirpreambulo},
-	    	pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    		linkcolor=blue,          		% color of internal links
-    		citecolor=blue,        		% color of links to bibliography
-    		filecolor=magenta,      	% color of file links
-		urlcolor=blue,
-		bookmarksdepth=4
-}
-\makeatother
-% --- 
-
-\setlength{\parindent}{1.3cm}		% Configura tamanho do parágrafo
-\setlength{\parskip}{0.2cm} 		% Controle do espaçamento entre um parágrafo e outro (tente também \onelineskip)
-
 
 \makeindex
 
@@ -165,12 +100,10 @@ em Engenharia de Segurança do Trabalho}
 
 \include{include/1-introduction}
 
-\part{Referenciais teóricos}
-
-\part{Resultados}
+%\part{Resultados}
 
 \phantompart % Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
-\include{include/5-conclusion}
+%\include{include/5-conclusion}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -181,25 +114,7 @@ em Engenharia de Segurança do Trabalho}
 
 %\glossary		% Consulte o manual da classe abntex2 para orientações sobre o glossário.
 
-% ----------------------------------------------------------
-% Apêndices
-% ----------------------------------------------------------
-\begin{apendicesenv}
-\partapendices		% Imprime uma página indicando o início dos apêndices
-
-\chapter{Apendice A}
-
-\end{apendicesenv}
-
-% ----------------------------------------------------------
-% Anexos
-% ----------------------------------------------------------
-\begin{anexosenv}
-\partanexos		% Imprime uma página indicando o início dos anexos
-
-\chapter{Anexo A}
-
-\end{anexosenv}
+%\input{include/A-apendix}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
