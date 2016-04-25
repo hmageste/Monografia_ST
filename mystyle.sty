@@ -62,3 +62,38 @@
 
 \setlength{\parindent}{1.3cm}		% Configura tamanho do parágrafo
 \setlength{\parskip}{0.2cm} 		% Controle do espaçamento entre um parágrafo e outro (tente também \onelineskip)
+
+%\renewcommand{\imprimircapa}{%
+%\begin{capa}%
+%\center
+%\ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA
+%MAIS ESTRANHOS
+%\vspace*{1cm}
+%{\ABNTEXchapterfont\large\imprimirautor}
+%\vfill
+%\begin{center}
+%\ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+%\end{center}
+%\vfill
+%\large\imprimirlocal
+%\large\imprimirdata
+%\vspace*{1cm}
+%\end{capa}
+%}
+
+\makeatletter
+\renewcommand{\folhaderostocontent}
+{
+\begin{center}
+	\MakeUppercase{\ABNTEXchapterfont\large\imprimirtitulo} \par\vspace*{\fill}
+	{\ABNTEXchapterfont\large\imprimirautor} \par\vspace*{\fill}
+	\abntex@ifnotempty{\imprimirpreambulo}\MakeUppercase{\imprimirpreambulo} \par\vspace*{\fill}
+
+	{\large\imprimirorientadorRotulo\par~\imprimirorientador}\par
+	\vspace*{\fill}
+	\MakeUppercase{\large\imprimirlocal}\par
+	{\large\imprimirdata}
+	\vspace*{1cm}
+\end{center}
+}
+\makeatother
