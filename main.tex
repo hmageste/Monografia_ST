@@ -23,7 +23,30 @@
 	brazil					% o último idioma é o principal do documento
 	]{abntex2}
 
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+
+\usepackage{subfiles}
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}		% Citações padrão ABNT
+
 \usepackage{mystyle}
+
+%\usepackage[backend=bibtex]{biblatex}
+%\addbibresource{references.bib}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -34,7 +57,7 @@
 \data{\today}
 \orientador{Justino Sanson Wanderley da Nóbrega, M. Sc.}
 %\coorientador{Equipe \abnTeX}
-\instituicao{%
+\instituicao{
   Universidade Federal do Rio de Janeiro - UFRJ
   \par
   Engenharia de Segurança do Trabalho
@@ -49,6 +72,7 @@ em Engenharia de Segurança do Trabalho}
 \makeindex
 
 \begin{document}
+
 \selectlanguage{brazil}
 \frenchspacing					% Retira espaço extra obsoleto entre as frases
 
@@ -65,7 +89,7 @@ em Engenharia de Segurança do Trabalho}
 \input{include/0-dedicatoria}
 \input{include/0-agradecimentos}
 \input{include/0-epigrafe}
-\include{include/0-summary}
+\input{include/0-summary}
 
 % ---
 % inserir lista de ilustrações
@@ -83,7 +107,7 @@ em Engenharia de Segurança do Trabalho}
 \cleardoublepage
 % ---
 
-\include{include/0-acronyms_symbols_list}
+\input{include/0-acronyms_symbols_list}
 
 % ---
 % inserir o sumario
@@ -98,9 +122,10 @@ em Engenharia de Segurança do Trabalho}
 % ----------------------------------------------------------
 \textual
 
-\include{include/1-introduction}
-\include{include/2-studysubject}
-\include{include/3-NR_analysis}
+\subfile{include/1-introduction}
+\subfile{include/2-embasement}
+\subfile{include/2-studysubject}
+\subfile{include/3-NR_analysis}
 
 \phantompart % Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
 %\include{include/5-conclusion}
@@ -110,7 +135,7 @@ em Engenharia de Segurança do Trabalho}
 % ----------------------------------------------------------
 \postextual
 
-\bibliography{abntex2-modelo-references}
+\bibliography{bibliography}
 
 %\glossary		% Consulte o manual da classe abntex2 para orientações sobre o glossário.
 
