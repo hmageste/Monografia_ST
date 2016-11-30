@@ -143,5 +143,5 @@ build/
 include/build/
 
 # Generated PDFs
-build/*.*
-include/build/*.*
+build/*
+include/build/*
